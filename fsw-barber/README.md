@@ -4,6 +4,7 @@
 - [x] Introdução ao Next.js
 - [x] Tailwind e Shadcn
 - [] Git Hooks
+- [] Tempo da aula 01 1:24:17
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
