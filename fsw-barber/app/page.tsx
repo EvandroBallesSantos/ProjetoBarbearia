@@ -2,18 +2,13 @@ import Image from "next/image"
 import { Input } from "./_components/ui/input"
 import { Button } from "./_components/ui/button"
 import { Badge } from "./_components/ui/badge"
-import Header from "./_components/ui/header"
-import {
-  EyeIcon,
-  FootprintsIcon,
-  Hand,
-  PaintbrushIcon,
-  SearchIcon,
-} from "lucide-react"
+import Header from "./_components/header"
+import { SearchIcon } from "lucide-react"
 import { Card, CardContent } from "./_components/ui/card"
 import { Avatar, AvatarImage } from "./_components/ui/avatar"
-import BarbershopItem from "./_components/ui/barbarshop-item"
+import BarbershopItem from "./_components/barbarshop-item"
 import { db } from "./_lib/prisma"
+import { QuickSearchOptions } from "./_constants/search"
 
 // SERVER COMPONET
 const Home = async () => {
@@ -44,58 +39,30 @@ const Home = async () => {
 
         {/* Botões de busca rápida */}
         <div className="mt-6 flex gap-3 overflow-x-scroll [&::-webkit-scrollbar]:hidden">
+          {QuickSearchOptions.map((options) => (
+            <Button className="gap-2" variant={"secondary"} key={options.title}>
+              <Image
+                className="mr-1"
+                src={options.imageUrl}
+                width={16}
+                height={16}
+                alt={options.title}
+              ></Image>
+              {options.title}
+            </Button>
+          ))}
+
+          {/*
           <Button className="gap-2" variant={"secondary"}>
             <Image
               className="mr-1"
-              src="/cabelo.svg"
+              src="/hidratacao.svg"
               width={16}
               height={16}
-              alt="cabelo"
+              alt="hidratação"
             ></Image>
-            Cabelo
-          </Button>
-
-          <Button className="gap-2" variant={"secondary"}>
-            <Image
-              className="mr-1"
-              src="/barba.svg"
-              width={16}
-              height={16}
-              alt="barba"
-            ></Image>
-            Barba
-          </Button>
-
-          <Button className="gap-2" variant={"secondary"}>
-            <Image
-              className="mr-1"
-              src="/acabamento.svg"
-              width={16}
-              height={16}
-              alt="acabamento"
-            ></Image>
-            Acabamento
-          </Button>
-
-          <Button className="gap-2" variant={"secondary"}>
-            <FootprintsIcon size={16}></FootprintsIcon>
-            Pézinho
-          </Button>
-
-          <Button className="gap-2" variant={"secondary"}>
-            <EyeIcon size={16}></EyeIcon>
-            Sobrancelha
-          </Button>
-
-          <Button className="gap-2" variant={"secondary"}>
-            <PaintbrushIcon size={16}></PaintbrushIcon>
-            Pintura
-          </Button>
-
-          <Button className="gap-2" variant={"secondary"}>
-            <Hand size={16}></Hand>
-            Massagem
-          </Button>
+            Hidratação
+          </Button> */}
         </div>
 
         {/* BANNER */}

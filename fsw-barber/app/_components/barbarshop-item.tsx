@@ -1,7 +1,7 @@
 import { Barbershop } from "@prisma/client"
-import { Card, CardContent } from "./card"
+import { Card, CardContent } from "./ui/card"
 import Image from "next/image"
-import { Button } from "./button"
+import { Button } from "./ui/button"
 import { StarIcon } from "lucide-react"
 import { Badge } from "@/app/_components/ui/badge"
 
