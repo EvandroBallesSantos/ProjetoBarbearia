@@ -1,14 +1,13 @@
 import Image from "next/image"
 import { Input } from "./_components/ui/input"
 import { Button } from "./_components/ui/button"
-import { Badge } from "./_components/ui/badge"
 import Header from "./_components/header"
 import { SearchIcon } from "lucide-react"
 import { Card, CardContent } from "./_components/ui/card"
-import { Avatar, AvatarImage } from "./_components/ui/avatar"
 import BarbershopItem from "./_components/barbarshop-item"
 import { db } from "./_lib/prisma"
 import { QuickSearchOptions } from "./_constants/search"
+import BookingItem from "./_components/booking-item"
 
 // SERVER COMPONET
 const Home = async () => {
@@ -76,31 +75,7 @@ const Home = async () => {
         </div>
 
         {/* AGENDAMENTO */}
-        <h2 className="text-gray-400 mb-3 mt-6 text-xs font-bold uppercase">
-          Agendamentos
-        </h2>
-        <Card>
-          <CardContent className="flex justify-between p-0">
-            {/* ESQUERDA */}
-            <div className="flex flex-col gap-2 py-5 pl-5">
-              <Badge className="w-fit">Confirmado</Badge>
-              <h3 className="font-semibold">Corte de Cabelo</h3>
-
-              <div className="flex items-center gap-2">
-                <Avatar className="h-6 w-6">
-                  <AvatarImage src="https://utfs.io/f/2f9278ba-3975-4026-af46-64af78864494-16u.png"></AvatarImage>
-                </Avatar>
-                <p className="text-sm">Barbearia StyleBarber</p>
-              </div>
-            </div>
-            {/* DIREITA */}
-            <div className="flex flex-col items-center justify-center border-l-2 border-solid px-5">
-              <p className="test-sm">Setembro</p>
-              <p className="text-2xl">16</p>
-              <p className="text-sm">20:00</p>
-            </div>
-          </CardContent>
-        </Card>
+        <BookingItem></BookingItem>
 
         {/* BarbershopItem Recomendados */}
         <h2 className="text-gray-400 mb-3 mt-6 text-xs font-bold uppercase">

@@ -41,14 +41,14 @@ model BarbershopService {
 }
 
 model Booking {
-  id           String            @id @default(uuid())
-  userId       String
-  user         User              @relation(fields: [userId], references: [id])
+  id        String            @id @default(uuid())
+  userId    String
+  user      User              @relation(fields: [userId], references: [id])
   // barbershopId String
   // barbershop   Barbershop        @relation(fields: [barbershopId], references: [id])
-  serviceId    String
-  service      BarbershopService @relation(fields: [serviceId], references: [id])
-  dateTime     DateTime
-  createdAt    DateTime          @default(now())
-  updatedAt    DateTime          @updatedAt
+  serviceId String
+  service   BarbershopService @relation(fields: [serviceId], references: [id])
+  dateTime  DateTime
+  createdAt DateTime          @default(now())
+  updatedAt DateTime          @updatedAt
 }
