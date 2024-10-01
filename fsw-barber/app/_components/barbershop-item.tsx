@@ -4,6 +4,7 @@ import Image from "next/image"
 import { Button } from "./ui/button"
 import { StarIcon } from "lucide-react"
 import { Badge } from "@/app/_components/ui/badge"
+import Link from "next/link"
 
 // tipando e importando do prisma.
 interface BarbershopItemProps {
@@ -39,8 +40,10 @@ const BarbershopItem = ({ barbershop }: BarbershopItemProps) => {
           <p className="truncate text-sm text-gray-light">
             {barbershop.address}
           </p>
-          <Button variant="secondary" className="mt-3 w-full">
-            Reservar
+          <Button variant="secondary" className="mt-3 w-full" asChild>
+            <Link href={`/barbershops/${barbershop.id}`}>
+                Reservar
+            </Link>
           </Button>
         </div>
       </CardContent>
