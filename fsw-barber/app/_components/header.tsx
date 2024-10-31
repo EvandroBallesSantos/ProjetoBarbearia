@@ -13,7 +13,6 @@ const Header = () => {
       <CardContent className="flex flex-row items-center justify-between p-5">
         <Image src="/logo.png" height={18} width={120} alt="logo FSW Barber" />
         
-
         <Sheet>
           {/* Botão de Menu Lateral do Header */}
           <SheetTrigger asChild>
@@ -40,8 +39,8 @@ const Header = () => {
             </div>
 
             {/* Botões Início e Agendamentos */}
-              
             <div className="flex flex-col gap-2 py-5 border-b border-solid">
+              {/* Link para a página Início e SheetClose: usado para fechar ao clicar no que estiver dentro */}
               <SheetClose asChild>
                   <Button className="justify-start gap-2" variant="ghost" asChild>
                     <Link href="/">
