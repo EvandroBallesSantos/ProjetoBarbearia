@@ -4,7 +4,8 @@
 - [x] Introdução ao Next.js
 - [x] Tailwind e Shadcn
 - [] Git Hooks
-- [] Tempo da aula 02 48m02s
+- [] Botão Copiar telephone aula 02 tempo=57m29s
+- [] Tempo da aula 02 1h02m02s
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

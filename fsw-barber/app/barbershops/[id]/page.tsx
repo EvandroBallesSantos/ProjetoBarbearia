@@ -1,7 +1,8 @@
+// import PhoneItem from "@/app/_components/phone-item";
 import ServiceItem from "@/app/_components/service-item";
 import { Button } from "@/app/_components/ui/button";
 import { db } from "@/app/_lib/prisma";
-import { ChevronLeftIcon, MapPinIcon, MenuIcon, StarIcon } from "lucide-react";
+import { ChevronLeftIcon, MapPinIcon, MenuIcon, SmartphoneIcon, StarIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -19,7 +20,7 @@ const BarbershopPage = async ({ params }: BarbershopPageProps) => {
         where: {
             id: params.id
         },
-        // adicionando a tabela services da barbearia em questão lá do banco de dados.
+        // adicionando a tabela services da barbearia em questão, lá do banco de dados.
         include: { 
             services: true
         }
@@ -28,6 +29,18 @@ const BarbershopPage = async ({ params }: BarbershopPageProps) => {
     if (!barbershop) {
         return <h1>Barbearia não encontrada!</h1>
     }
+
+    // const handleCopyPhoneClick = () => {
+    //     return (event: React.MouseEvent) => {
+    //         navigator.clipboard.writeText(barbershop.phones[0]);
+    //         alert("Número copiado com sucesso!");
+    //     }
+    // }
+
+    // barbershop.phones[0] 
+    // navigator.clipboard.writeText(phone);
+    // alert("Número copiado com sucesso!");
+    // onClick="handleCopyPhoneClick()"
 
     return (
         <div>
@@ -47,6 +60,7 @@ const BarbershopPage = async ({ params }: BarbershopPageProps) => {
                 <MenuIcon/>
             </Button>
             
+            {/* TÍTULO */}
             <div className="p-5 border-b border-solid">
                 <h1 className="text-xl font-bold mb-3">{barbershop?.name}</h1>
                 <div className="flex gap-1 mb-2">
@@ -66,10 +80,26 @@ const BarbershopPage = async ({ params }: BarbershopPageProps) => {
             </div>
 
             {/* SERVIÇOS */}
-            <div className="p-5 space-y-3">
+            <div className="p-5 space-y-3 border-b border-solid">
                 <h2 className="font-bold uppercase text-neutral-300">Serviços</h2>
                 <div className="space-y-3">
                     {barbershop.services.map(service => <ServiceItem key={service.id} service={service}/>)}
+                </div>
+            </div>
+
+            {/* CONTATO */}
+            <div className="p-5">
+                <div className="p-5 uppercase">
+                    Contato
+                </div>
+                <div className="flex px-3 justify-between">
+                    <div className="flex items-center gap-2">
+                        <SmartphoneIcon/>
+                        {barbershop.phones}
+                    </div>
+                    <div>
+                        <Button>Copiar</Button>
+                    </div>
                 </div>
             </div>
 
