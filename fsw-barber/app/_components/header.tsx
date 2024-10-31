@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { Card, CardContent } from "./ui/card"
-import SidebarButton from "./sidebar-buttons"
+import SidebarButton from "./sidebar-button"
 
 
 const Header = () => {
