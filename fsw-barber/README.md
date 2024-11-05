@@ -5,7 +5,13 @@
 - [x] Tailwind e Shadcn
 - [] Git Hooks
 - [] Botão Copiar telephone aula 02 tempo=57m29s
-- [] Tempo da aula 02 1h02m02s
+- [] Tempo da aula 03 20m02s 
+    : Alterando o arquivo sidebar-button.tsx
+    : Instalção do shadcn dialog popup para login.
+    : Integração do Next Auth para autenticar login do Google.
+    : Criando o arquivo route.tsx dentro de app/api/auth/[...]
+    : Usando o adaptador do Auth.js para integrar ao Prisma, lembrar de fazer as adaptações no esquema de tabela do prisma como está na documentação do Auth.js.
+    : Formatar a tabela do prisma e fazer a migração das tabelas novas mudando o estado do banco de dados. #npx prisma format #npx prisma migrate dev --name add_auth_tables #npx prisma studio
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
