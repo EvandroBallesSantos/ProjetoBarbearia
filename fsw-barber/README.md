@@ -12,6 +12,10 @@
     : Criando o arquivo route.tsx dentro de app/api/auth/[...]
     : Usando o adaptador do Auth.js para integrar ao Prisma, lembrar de fazer as adaptações no esquema de tabela do prisma como está na documentação do Auth.js.
     : Formatar a tabela do prisma e fazer a migração das tabelas novas mudando o estado do banco de dados. #npx prisma format #npx prisma migrate dev --name add_auth_tables #npx prisma studio
+    : ir para https://console.cloud.google.com, criar um novo projeto para criar o GOOGLE_CLIENT_ID e GOOGLE_CLIENT_SECRET. *em "APIs e serviços/credenciais" ir em "Criar Credenciais" e clicar em "ID do Cliente OAuth" e configurar a tela de consentimento: Nome do app, E-mail para suporte do usuário e dados de contato do desenvolvedor. Ir em Voltar ao Painel. Clicar em "Publicar App". Clicar en "Credenciais", "Criar Credenciais" e "ID do Cliente OAuth", selecionar o tipo da aplicação e dê nome a aplicação. Em "Origens JavaScript autorizadas" colocar "http://localhost:3000" e em "URIs de redirecionamento autorizados" colocar "http://localhost:3000/api/auth/callback/google" depois clicar em "Criar". Então, após criar o "Cliente OAuth criado" copiar o ID do cliente e a chave secreta do cliente e colar no arquivo ".env" na pasta raiz da aplicação.
+    : Alteração do arquivo "sidebar-button.tsx"
+    : Alteração do arquivo "layout.tsx"
+    : Reiciniar a aplicação para aplicar as alterações.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
