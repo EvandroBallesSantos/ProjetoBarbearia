@@ -8,6 +8,7 @@ import BarbershopItem from "./_components/barbershop-item"
 import { db } from "./_lib/prisma"
 import { QuickSearchOptions } from "./_constants/search"
 import BookingItem from "./_components/booking-item"
+import Search from "./_components/search"
 
 // SERVER COMPONET
 const Home = async () => {
@@ -29,11 +30,8 @@ const Home = async () => {
         <p>Segunda-feira, 16 de setembro.</p>
 
         {/* BUSCA */}
-        <div className="mt-6 flex items-center gap-2">
-          <Input placeholder="Faça sua busca..."></Input>
-          <Button>
-            <SearchIcon></SearchIcon>
-          </Button>
+        <div className="mt-6">
+          <Search/>
         </div>
 
         {/* Botões de busca rápida */}

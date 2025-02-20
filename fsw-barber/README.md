@@ -5,7 +5,7 @@
 - [x] Tailwind e Shadcn
 - [] Git Hooks
 - [] Botão Copiar telephone aula 02 tempo=57m29s
-- [] Tempo da aula 03 20m02s 
+- [] Tempo da aula 03 parei: 01h33m29s
     : Alterando o arquivo sidebar-button.tsx
     : Instalção do shadcn dialog popup para login.
     : Integração do Next Auth para autenticar login do Google.
@@ -16,6 +16,7 @@
     : Alteração do arquivo "sidebar-button.tsx"
     : Alteração do arquivo "layout.tsx"
     : Reiciniar a aplicação para aplicar as alterações.
+    : Criar o arquivo "search.tsx" que irá conter a ação de busca do input formulário e importar esse componente no arquivo "page.tsx", nesse arquivo usaremos o hock do react em conjunto com o shadcn form fazendo a instalação do mesmo com "npx shadcn@latest add form". Vamos instalar também o "zodResolver" npm install @hookform/resolvers
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

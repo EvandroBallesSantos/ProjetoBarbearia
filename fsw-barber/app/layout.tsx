@@ -21,12 +21,13 @@ export default function RootLayout({
       <body className={inter.className}>
 
         <AuthProvider>
-          {children} {/* Renderizando sempre a página atual */}
+          <div className="flex h-full flex-col">
+            <div className="flex-1">
+              {children} {/* Renderizando sempre a página atual */}
+            </div>
           <Footer/>        
-        </AuthProvider>
-        
-
-      
+          </div>
+        </AuthProvider>  
       </body>
     </html>
   )
