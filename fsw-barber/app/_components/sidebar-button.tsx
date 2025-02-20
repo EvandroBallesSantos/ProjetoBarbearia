@@ -96,12 +96,17 @@ const SidebarButton = () => {
 
             {/* Botões Categorias: cabelo, barba, acabamento, Sobrancelha... */}
             <div className="flex flex-col gap-2 py-5 border-b border-solid">
+              Serviços:
               {/* Usando a constante categorias */}
               {QuickSearchOptions.map((option) => ( /* para cada options vai renderizar o que está abaixo */
-                <Button key={option.title} className="justify-start gap-2" variant="ghost">
-                <Image src={option.imageUrl} height={18} width={18} alt={option.title}/>
-                {option.title}
-              </Button>
+                <SheetClose key={option.title} asChild>
+                  <Button className="justify-start gap-2" variant="ghost" asChild>
+                    <Link href={`/barbershops?service=${option.title}`}>
+                     <Image src={option.imageUrl} height={18} width={18} alt={option.title}/>
+                     {option.title}
+                    </Link>
+                  </Button>
+                </SheetClose>
               ))}
             </div>
 

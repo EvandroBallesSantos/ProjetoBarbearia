@@ -9,6 +9,7 @@ import { db } from "./_lib/prisma"
 import { QuickSearchOptions } from "./_constants/search"
 import BookingItem from "./_components/booking-item"
 import Search from "./_components/search"
+import Link from "next/link"
 
 // SERVER COMPONET
 const Home = async () => {
@@ -37,7 +38,8 @@ const Home = async () => {
         {/* Botões de busca rápida */}
         <div className="mt-6 flex gap-3 overflow-x-scroll [&::-webkit-scrollbar]:hidden">
           {QuickSearchOptions.map((options) => (
-            <Button className="gap-2" variant={"secondary"} key={options.title}>
+            <Button className="gap-2" variant={"secondary"} key={options.title} asChild>
+              <Link href={`/barbershops?service=${options.title}`}>
               <Image
                 className="mr-1"
                 src={options.imageUrl}
@@ -46,6 +48,7 @@ const Home = async () => {
                 alt={options.title}
               ></Image>
               {options.title}
+              </Link>
             </Button>
           ))}
 

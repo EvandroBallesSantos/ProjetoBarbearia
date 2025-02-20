@@ -3,7 +3,6 @@
 import { SearchIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
-import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 import { z } from "zod"
@@ -13,7 +12,7 @@ import { Form, FormControl, FormField, FormItem, FormMessage } from "@/component
  
 // Schema zod para validar o input do formulário. A busca é obrigatória, com um mínimo de 1 e um máximo de 50 caracteres, e o "trin()" diz que não é para considerar espaços em branco.
 const formSchema = z.object({
-  search: z.string().trim().min(1, {
+  title: z.string().trim().min(1, {
     message: "Digite algo para buscar!",
   }).max(50),
 })
@@ -23,7 +22,7 @@ const Search = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      search: "",
+      title: "",
     },
   })
 
@@ -33,7 +32,7 @@ const Search = () => {
 
   // Função para o submit do formulário, redirecionando para a página de busca com a query string.
   const handleSubmit = (data: z.infer<typeof formSchema>) => {
-    router.push(`/barbershops?search=${data.search}`)
+    router.push(`/barbershops?title=${data.title}`)
   }
 
   return (
@@ -56,7 +55,7 @@ const Search = () => {
         >
           <FormField
             control={form.control}
-            name="search"
+            name="title"
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormControl>

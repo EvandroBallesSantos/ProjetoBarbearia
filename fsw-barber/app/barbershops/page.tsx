@@ -5,18 +5,60 @@ import { db } from "../_lib/prisma";
 
 interface BarbershopsPageParams {
     searchParams: {
-        search?: string
+        title?: string
+        service?: string
     }}
 
 const BarbershopsPage = async ({searchParams}: BarbershopsPageParams) => {
     const barbershops = await db.barbershop.findMany({
         where: {
-            name: {
-                contains: searchParams?.search,
-                mode: "insensitive", // para não divergir letras maiusculas de minusculas.
-            }
+            OR: [
+                searchParams?.title
+                ? {
+                    name: {
+                        contains: searchParams?.title,
+                        mode: "insensitive", // para não divergir letras maiusculas de minusculas.
+                    }
+                }: {},
+                searchParams?.service
+                ? {
+                    services: {
+                        some: {
+                            name: {
+                                contains: searchParams?.service,
+                                mode: "insensitive", // para não divergir letras maiusculas de minusculas.
+                            }
+                        }
+                    }
+                }: {},
+                
+            ]           
         }
     })
+    // {
+    //     name: {
+    //         contains: searchParams?.title,
+    //         mode: "insensitive", // para não divergir letras maiusculas de minusculas.
+    //     }
+    // },
+    // {
+    //     services: {
+    //         some: {
+    //             name: {
+    //                 contains: searchParams?.service,
+    //                 mode: "insensitive", // para não divergir letras maiusculas de minusculas.
+    //             }
+    //         }
+    //     }
+    // }
+
+
+
+
+
+
+
+
     return (
         <div>
             <Header />
@@ -25,7 +67,7 @@ const BarbershopsPage = async ({searchParams}: BarbershopsPageParams) => {
             </div>
             <div className="px-5">
             <h2 className="mb-3 mt-6 text-xs font-bold uppercase text-gray-400">
-                Resultados para {searchParams.search}
+                Resultados para {searchParams?.title || searchParams?.service}
                 {/* Resultados para &quot;{searchParams.search}&quot; */}
             </h2>
             <div className="grid grid-cols-2 gap-4">
