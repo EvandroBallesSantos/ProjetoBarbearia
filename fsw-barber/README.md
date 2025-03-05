@@ -30,6 +30,9 @@
     :Criando o botão Confirmar no HTML.
     :Criando o componente create-booking.ts que é um "use server", serviço que será executado do lado do servidor, que será usado para armazenar as informações do agendamento no banco de dados Prisma.
     :Dentro do arquivo route.ts do NextOff, criar um parâmetro de callbacks que irá armazenar os dados de usuário que estará logado no app.
+    :Desabilitando o botão de confirmar agendamento caso o usuário não tenha selecionado o dia ou o horário desejado.
+    :Criando um componente "server action" "get-gookings.ts" para monitorar os agendamentos no banco de dados, para que não haja reservas duplicadas.
+    :
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
