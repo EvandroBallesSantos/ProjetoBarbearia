@@ -5,7 +5,7 @@
 - [x] Tailwind e Shadcn
 - [] Git Hooks
 - [] Botão Copiar telephone aula 02 tempo=57m29s
-- [] Tempo da aula 03 parei: 01h33m29s
+- [] Aula 03 Finalizada:
     : Alterando o arquivo sidebar-button.tsx
     : Instalção do shadcn dialog popup para login.
     : Integração do Next Auth para autenticar login do Google.
@@ -17,6 +17,20 @@
     : Alteração do arquivo "layout.tsx"
     : Reiciniar a aplicação para aplicar as alterações.
     : Criar o arquivo "search.tsx" que irá conter a ação de busca do input formulário e importar esse componente no arquivo "page.tsx", nesse arquivo usaremos o hock do react em conjunto com o shadcn form fazendo a instalação do mesmo com "npx shadcn@latest add form". Vamos instalar também o "zodResolver" npm install @hookform/resolvers
+    : Configurando todas as buscas contidas na aplicação para buscarem por titulo ou por serviço.
+[] Aula 04: 46m00s Criando  a página de agendamento.
+    :Instalei a partir do Shadcn o calendário, e a localização veio do React Daypicker.
+    :Fiz toda configuração da aparência do calenário.
+    :Criando um objeto lista com os horários disponíveis para agendamento.
+    :Criando o componente no HTML para aparecerem os horários.
+    :Criando a função que seleciona a data e aparecem os horários.
+    :Criando o estado que seleciona o horário desejado.
+    :Criando a função que seleciona e marca o horário desejado.
+    :Criando o Card no HTML onde aparecerão todas os dados da data, horário e nome da barbearia.
+    :Criando o botão Confirmar no HTML.
+    :Criando o componente create-booking.ts que é um "use server", serviço que será executado do lado do servidor, que será usado para armazenar as informações do agendamento no banco de dados Prisma.
+    :Dentro do arquivo route.ts do NextOff, criar um parâmetro de callbacks que irá armazenar os dados de usuário que estará logado no app.
+
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
