@@ -18,7 +18,7 @@
     : Reiciniar a aplicação para aplicar as alterações.
     : Criar o arquivo "search.tsx" que irá conter a ação de busca do input formulário e importar esse componente no arquivo "page.tsx", nesse arquivo usaremos o hock do react em conjunto com o shadcn form fazendo a instalação do mesmo com "npx shadcn@latest add form". Vamos instalar também o "zodResolver" npm install @hookform/resolvers
     : Configurando todas as buscas contidas na aplicação para buscarem por titulo ou por serviço.
-[] Aula 04: 46m00s Criando  a página de agendamento.
+[] Aula 04: 1h56m00s Criando  a página de agendamento.
     :Instalei a partir do Shadcn o calendário, e a localização veio do React Daypicker.
     :Fiz toda configuração da aparência do calenário.
     :Criando um objeto lista com os horários disponíveis para agendamento.
@@ -32,7 +32,7 @@
     :Dentro do arquivo route.ts do NextOff, criar um parâmetro de callbacks que irá armazenar os dados de usuário que estará logado no app.
     :Desabilitando o botão de confirmar agendamento caso o usuário não tenha selecionado o dia ou o horário desejado.
     :Criando um componente "server action" "get-gookings.ts" para monitorar os agendamentos no banco de dados, para que não haja reservas duplicadas.
-    :
+    :Trabalhando na função de mostrar a opção de fazer login caso o usuário não estiver logado e tente fazer uma reserva.
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).

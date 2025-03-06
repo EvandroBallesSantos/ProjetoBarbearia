@@ -6,16 +6,16 @@ import { CalendarIcon, HomeIcon, LogInIcon, LogOutIcon, MenuIcon } from "lucide-
 import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { QuickSearchOptions } from "../_constants/search"
 import Link from "next/link"
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import { signIn, signOut, useSession } from "next-auth/react"
+import { Dialog, DialogTrigger } from "@/components/ui/dialog"
+import { signOut, useSession } from "next-auth/react"
 import { Avatar, AvatarImage } from "./ui/avatar"
+import SigInDialog from "./sign-in-dialog"
 
 const SidebarButton = () => {
 
   const { data } = useSession()
 
-  // Função logar importando o signIn do next-auth e indicando qual provider estou usando.
-  const  handleLoginWithGoogleClick = () => signIn("google")
+  
   // Função deslogar da conta importando o signOut do next-auth.
   const handleLogoutClick = () => signOut()
 
@@ -58,18 +58,7 @@ const SidebarButton = () => {
                         <LogInIcon size={18}/>
                       </Button>
                     </DialogTrigger>
-                    <DialogContent>
-                      <DialogHeader>
-                        <DialogTitle>Faça o login na plataforma</DialogTitle>
-                        <DialogDescription>
-                          Conecte-se usando sua conta do Google
-                        </DialogDescription>
-                      </DialogHeader>
-                      <Button variant="outline" className="font-bold gap-1" onClick={handleLoginWithGoogleClick}>
-                        <Image src="/google.svg" width={18} height={18} alt="fazer login com o google"/>
-                        Google
-                      </Button>
-                    </DialogContent>
+                    <SigInDialog/>
                   </Dialog>
                 </>
               )}
