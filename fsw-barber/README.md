@@ -32,7 +32,8 @@
     :Dentro do arquivo route.ts do NextOff, criar um parâmetro de callbacks que irá armazenar os dados de usuário que estará logado no app.
     :Desabilitando o botão de confirmar agendamento caso o usuário não tenha selecionado o dia ou o horário desejado.
     :Criando um componente "server action" "get-gookings.ts" para monitorar os agendamentos no banco de dados, para que não haja reservas duplicadas.
-    :Trabalhando na função de mostrar a opção de fazer login caso o usuário não estiver logado e tente fazer uma reserva.
+    :Trabalhando na função de mostrar a opção de fazer login caso o usuário não estiver logado e tente fazer uma reserva, nesse caso, componentizei a caixa de dialogo para login no componente "sign-in-dialog.tsx" 
+    :
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
