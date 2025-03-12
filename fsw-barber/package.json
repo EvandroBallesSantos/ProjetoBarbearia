@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "install": "npm install"
   },
   "prisma": {
     "seed": "ts-node prisma/seed.ts"
@@ -38,7 +39,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^8.41.0",
+    "eslint": "^9.22.0",
     "eslint-config-next": "15.1.6",
     "eslint-plugin-react": "^7.37.4",
     "globals": "^16.0.0",
