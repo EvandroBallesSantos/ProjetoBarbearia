@@ -1,3 +1,4 @@
+import React from 'react'
 import { Badge } from "@/app/_components/ui/badge"
 import { Card, CardContent } from "./ui/card";
 import { Avatar, AvatarImage } from "@radix-ui/react-avatar";

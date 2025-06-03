@@ -1,15 +1,14 @@
+import React from 'react'
 import Image from "next/image"
-import { Input } from "./_components/ui/input"
 import { Button } from "./_components/ui/button"
 import Header from "./_components/header"
-import { SearchIcon } from "lucide-react"
-import { Card, CardContent } from "./_components/ui/card"
 import BarbershopItem from "./_components/barbershop-item"
 import { db } from "./_lib/prisma"
 import { QuickSearchOptions } from "./_constants/search"
 import BookingItem from "./_components/booking-item"
 import Search from "./_components/search"
 import Link from "next/link"
+
 
 // SERVER COMPONET
 const Home = async () => {
@@ -21,14 +20,35 @@ const Home = async () => {
     },
   })
 
+
+  const now = new Date()
+  // const datetime = now.toLocaleDateString()
+  const datetime = now.toUTCString()
+
   return (
     <div>
       <Header></Header>
 
-      <div className="p-5">
+      {/* Se tiver sogado renderizar */}
+      {/* {data?.user ? (
+                <div className="p-5"> */}
         {/* TEXTO */}
-        <h2 className="text-xl font-bold">Olá Evandro!</h2>
-        <p>Segunda-feira, 16 de setembro.</p>
+        {/* <h2 className="text-xl font-bold">Olá {data?.user?.name}!</h2>
+        <p>{datetime}</p>
+
+        </div>
+              ) : (
+                <div className="p-5"> */}
+        {/* TEXTO */}
+        {/* <h2 className="text-xl font-bold">Olá Desconhecido!</h2>
+        <p>{datetime}</p>
+
+        </div>
+        )} */}
+
+      <div className="p-5">
+        <h2 className="text-xl font-bold">Olá {}!</h2>
+        <p>{datetime}</p>
 
         {/* BUSCA */}
         <div className="mt-6">
@@ -66,13 +86,10 @@ const Home = async () => {
         </div>
 
         {/* BANNER */}
-        <div className="relative mt-6 h-[150px] w-full">
-          <Image
-            alt="Banner01"
-            src="/banner-01.png"
-            fill
-            className="rounded-xl object-cover"
-          ></Image>
+        {/* <div className="relative mt-6 h-[150px] w-full"> */}
+        <div className="relative rounded-xl mt-6 h-40 sm:h-48 md:h-56 lg:h-64">
+          <Image alt="Banner01" src="/banner-01.png" fill className="rounded-xl object-cover h-full w-full">
+          </Image>
         </div>
 
         {/* AGENDAMENTO */}

@@ -1,5 +1,6 @@
 "use client" //Pois estou usando onClick do javascript.
 
+import React from 'react'
 import Image from "next/image"
 import { Button } from "./ui/button"
 import { CalendarIcon, HomeIcon, LogInIcon, LogOutIcon, MenuIcon } from "lucide-react"

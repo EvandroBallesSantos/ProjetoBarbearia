@@ -1,3 +1,4 @@
+import React from 'react'
 import { Barbershop } from "@prisma/client"
 import { Card, CardContent } from "./ui/card"
 import Image from "next/image"

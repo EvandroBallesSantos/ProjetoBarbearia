@@ -1,7 +1,8 @@
+import React from 'react'
 import { DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "./ui/button";
 import Image from "next/image";
-import { signIn, signOut, useSession } from "next-auth/react"
+import { signIn } from "next-auth/react"
 
 
 

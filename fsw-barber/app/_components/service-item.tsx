@@ -1,18 +1,19 @@
 "use client"
 
+import React from 'react'
 import { Barbershop, BarbershopService, Booking } from "@prisma/client";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 import { Sheet, SheetClose, SheetContent, SheetFooter, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { Calendar } from "@/components/ui/calendar";
-import { addDays, format, set, setHours } from "date-fns";
+import { format, set } from "date-fns";
 import { ptBR } from "date-fns/locale"
 import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 import { createBooking } from "../_actions/create-boocking";
 import { getBookings } from "../_actions/get-bookings";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import SigInDialog from "./sign-in-dialog";
 
 
